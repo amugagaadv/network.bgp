@@ -1,14 +1,14 @@
+---
 name: Test collection
 
 concurrency:
   group: ${{ github.head_ref }}
   cancel-in-progress: true
 
-on:
+true:
   pull_request:
     branches: [main]
   workflow_dispatch:
-
 jobs:
   ansible-lint:
     uses: ansible-network/github_actions/.github/workflows/ansible-lint.yml@main
